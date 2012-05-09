@@ -1,0 +1,16 @@
+{ok, {Status1, Headers1, Body1}} = httpc:request("https://api.github.com/events").
+{Events} = jiffy:decode(Body1).
+
+
+{ok, {Status1, Headers1, Body1}} = httpc:request("https://api.github.com/repos/depesz/docbot/languages").
+
+sqlite3:open(ct, [{file, "/home/alex/Downloads/erlang_github/hello.sqlite"}]).
+sqlite3:sql_exec(ct, "SELECT * FROM repos WHERE id = ?", [4258124]);
+
+
+
+38> sqlite3:sql_exec(ct, "SELECT erlang FROM repos WHERE id = ?", [33]).
+[{columns,["(ä`³ng"]},{rows,[]}]
+39> sqlite3:sql_exec(ct, "SELECT erlang FROM repos WHERE id = ?", [4258124]).
+[{columns,["Erlang"]},{rows,[{<<"FALSE">>}]}]
+
