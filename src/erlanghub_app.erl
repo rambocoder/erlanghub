@@ -10,12 +10,12 @@
 %% ===================================================================
 
 start(_StartType, _StartArgs) ->
-  ok = erlanghub_cowboy:start(),
   ok = crypto:start(),
   ok = inets:start(),
   ok = ssl:start(),
-  sqlite3:open(ct, [{file, "priv/erlanghub.sqlite"}]),
-  application:start(tinymq),
+  {ok, _} = sqlite3:open(ct, [{file, "priv/erlanghub.sqlite"}]),
+  ok = application:start(tinymq),
+  ok = erlanghub_cowboy:start(),
   erlanghub_sup:start_link().
 
 stop(_State) ->
