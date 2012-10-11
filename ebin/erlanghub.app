@@ -1,0 +1,11 @@
+{application,erlanghub,
+             [{description,[]},
+              {vsn,"1"},
+              {registered,[]},
+              {applications,[kernel,stdlib]},
+              {mod,{erlanghub_app,[]}},
+              {env,[]},
+              {modules,[default_handler,erlanghub,erlanghub_app,
+                        erlanghub_cowboy,erlanghub_pull_handler,erlanghub_sup,
+                        eventsource_emitter,eventsource_handler,github_server,
+                        home_handler,repo_server]}]}.
