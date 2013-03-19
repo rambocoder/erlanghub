@@ -3,19 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="64b9ed1d-f865-415f-8849-671d66542d8b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/priv/erlanghub.sqlite" afterPath="$PROJECT_DIR$/priv/erlanghub.sqlite" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/default_handler.erl" afterPath="$PROJECT_DIR$/src/default_handler.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/erlanghub_cowboy.erl" afterPath="$PROJECT_DIR$/src/erlanghub_cowboy.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/erlanghub_pull_handler.erl" afterPath="$PROJECT_DIR$/src/erlanghub_pull_handler.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/github_server.erl" afterPath="$PROJECT_DIR$/src/github_server.erl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/start.sh" afterPath="$PROJECT_DIR$/start.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/priv/static/home.js" afterPath="$PROJECT_DIR$/priv/static/home.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/priv/html/index.html" afterPath="$PROJECT_DIR$/priv/html/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="erlanghub.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="64b9ed1d-f865-415f-8849-671d66542d8b" time="1363707741102" ignored="false" />
+    <file path="/Dummy.txt" changelist="64b9ed1d-f865-415f-8849-671d66542d8b" time="1363710174036" ignored="false" />
     <file path="/github_server.erl" changelist="64b9ed1d-f865-415f-8849-671d66542d8b" time="1363708191300" ignored="false" />
     <file path="/erlanghub_cowboy.erl" changelist="64b9ed1d-f865-415f-8849-671d66542d8b" time="1363709195420" ignored="false" />
+    <file path="/index.html" changelist="64b9ed1d-f865-415f-8849-671d66542d8b" time="1363717646435" ignored="false" />
+    <file path="/home.js" changelist="64b9ed1d-f865-415f-8849-671d66542d8b" time="1363719497566" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,19 +81,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/priv/html/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="4" selection-start="1117" selection-end="1117" vertical-scroll-proportion="0.7070707">
+            <state line="16" column="27" selection-start="804" selection-end="804" vertical-scroll-proportion="-8.541667">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="jquery.min.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/priv/static/jquery.min.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/priv/static/home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="31" selection-start="1699" selection-end="1699" vertical-scroll-proportion="0.0">
+            <state line="15" column="19" selection-start="488" selection-end="488" vertical-scroll-proportion="0.38330495">
               <folding />
             </state>
           </provider>
@@ -146,15 +153,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="erlanghub_sup.erl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/erlanghub_sup.erl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="23" selection-start="460" selection-end="460" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="github_server.erl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/github_server.erl">
           <provider selected="true" editor-type-id="text-editor">
@@ -184,8 +182,6 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/src/repo_server.erl" />
-        <option value="$PROJECT_DIR$/priv/static/home.js" />
-        <option value="$PROJECT_DIR$/priv/html/index.html" />
         <option value="$PROJECT_DIR$/deps/tinymq/src/tinymq_channels_sup.erl" />
         <option value="$PROJECT_DIR$/deps/tinymq/src/tinymq_channel_sup.erl" />
         <option value="$PROJECT_DIR$/deps/tinymq/src/tinymq_controller.erl" />
@@ -199,8 +195,13 @@
         <option value="$PROJECT_DIR$/src/erlanghub_pull_handler.erl" />
         <option value="$PROJECT_DIR$/src/erlanghub_cowboy.erl" />
         <option value="$PROJECT_DIR$/src/github_server.erl" />
+        <option value="$PROJECT_DIR$/priv/html/index.html" />
+        <option value="$PROJECT_DIR$/priv/static/home.js" />
       </list>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState />
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-1" />
@@ -521,13 +522,18 @@
       <created>1349218186187</created>
       <updated>1349218186187</updated>
     </task>
+    <task id="LOCAL-00001" summary="Using Cowboy 0.8.2 and config file">
+      <created>1363710189389</created>
+      <updated>1363710189389</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="24" width="1380" height="793" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41294298" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41421947" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -535,11 +541,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32932332" sideWeight="0.5857805" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22406015" sideWeight="0.587057" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22406015" sideWeight="0.5857805" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -586,7 +593,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" />
+    <option name="LAST_COMMIT_MESSAGE" value="Using Cowboy 0.8.2 and config file" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -599,16 +606,12 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
+    <MESSAGE value="Using Cowboy 0.8.2 and config file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="11" selection-start="11" selection-end="11" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/useful snippets.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -672,20 +675,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/priv/static/test.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/priv/static/home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="31" selection-start="1699" selection-end="1699" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/erlanghub_pull_handler.erl">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -707,9 +696,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/priv/static/test.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/priv/static/jquery.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/priv/html/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="4" selection-start="1117" selection-end="1117" vertical-scroll-proportion="0.7070707">
+        <state line="16" column="27" selection-start="804" selection-end="804" vertical-scroll-proportion="-8.541667">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/priv/static/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="19" selection-start="488" selection-end="488" vertical-scroll-proportion="0.38330495">
           <folding />
         </state>
       </provider>
