@@ -26,7 +26,9 @@ handle_cast(_Msg, State) ->
   {noreply, State}.
 
 handle_info(trigger, Cache) ->
-  case httpc:request(get, {"https://api.github.com/events", []}, [{timeout, 10000}], []) of
+  {ok, Username} = application:get_env(erlanghub, username),
+  {ok, Password} = application:get_env(erlanghub, password),
+  case httpc:request(get, {"https://api.github.com/events", [auth_header(Username, Password)]}, [{timeout, 10000}], []) of
     {error, Reason} ->
       io:format("github_server error in https:request:~p~n", [Reason]),
       NewCache = Cache;
@@ -88,3 +90,8 @@ publish([{<<"TRUE">>}], E) ->
   tinymq:push("events", jiffy:encode(E));
 publish([{<<"FALSE">>}], E) ->
   ok.
+
+
+auth_header(User, Pass) ->
+    Encoded = base64:encode_to_string(lists:append([erlang:atom_to_list(User),":",erlang:atom_to_list(Pass)])),
+    {"Authorization","Basic " ++ Encoded}.
