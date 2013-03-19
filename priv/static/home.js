@@ -32,7 +32,8 @@ $(function () {
                 // work with value
                 msg = value.replace("\\", "");
                 obj = JSON.parse(msg);
-                $("#msgList").prepend('<li>' + obj.type + " in "  + obj.repo.name + " by: " + obj.actor.login + '</li>');
+                var date = new Date(obj.created_at);
+                $("#msgList").prepend('<li>' + date.toString().replace(/GMT.*/g,"") + " " + obj.type + ' in <a href="https://github.com/'  + obj.repo.name + '" target="_blank">' + obj.repo.name + '</a> by: <a href="https://github.com/' + obj.actor.login + '" target="_blank">' + obj.actor.login +'</a></li>');
                 //$.getJSON(obj.repo.url, function (data) {
                 //    $("#msgList").prepend('<li>' + obj.type + " : " + data.name + " @ <a href='" + data.html_url + "'>" + obj.repo.name + "</a> Language: " + data.language + '</li>');
                 //});
@@ -43,6 +44,7 @@ $(function () {
             $("#msgList").prepend('<li><span class="error">' + error + '</span></li>');
         }
     };
+
 
     $('#Events').bind({
         'pull': function () {
@@ -76,8 +78,19 @@ $(function () {
             setTimeout(function () { /* Do Nothing here */
             }, 1);
         }
-    }).triggerHandler("pull"); // kick off the pull event after all the events are bound to the Events object
+    });
 
+    $('#Events').bind({
+        'start' : function() {
+            $.getJSON(pullUrl, function (data) {
+                // data.timestamp is in microseconds
+                // let's get the last 5 minutes of changes
+                var subtract = 5 * 60 * 1000000;
+                timestamp = data.timestamp - subtract;
+                // kick off the pull event after we get the last timestamp
+                $('#Events').triggerHandler("pull");
+            });
+        }}).triggerHandler("start");
 
 });
 

@@ -34,7 +34,7 @@ since(<<"GET">>, Since, Req) ->
   end,
   Json = jiffy:encode({[{timestamp, Timestamp}, {messages, Messages}, {timeout, Timeout}]}),
   cowboy_req:reply(200,
-                   [{<<"Content-Encoding">>, <<"utf-8">>}, {<<"content-type">>, <<"application/json">>}], Json, Req);
+                   [{<<"content-encoding">>, <<"utf-8">>}, {<<"content-type">>, <<"application/json">>}], Json, Req);
 since(_, _, Req) ->
 %% Method not allowed.
   cowboy_req:reply(405, Req).

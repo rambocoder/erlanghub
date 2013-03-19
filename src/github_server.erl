@@ -43,7 +43,7 @@ handle_info(trigger, Cache) ->
           NewCache = Cache;
         Events ->
           NewCache = lists:foldl(fun (Event, Acc) -> insert_event(Event, Acc) end, Cache, lists:reverse(Events)),
-          io:format("Received Events from github:~n", []),
+          io:format("Received Events from github~n", []),
 % ok = file:write_file("output.txt", Body1, [write, append]),
           RemainingHits = proplists:get_value("x-ratelimit-remaining", Headers1),
           io:format("Remaining hits: ~p ~n", [RemainingHits])

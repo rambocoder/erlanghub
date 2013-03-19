@@ -53,10 +53,13 @@ code_change(_OldVsn, State, _Extra) ->
 
 
 fetch_language_info({RepoId, RepoUrl}) ->
+
+  {ok, Username} = application:get_env(erlanghub, username),
+  {ok, Password} = application:get_env(erlanghub, password),
   LanguageUrl = string:concat(unicode:characters_to_list(RepoUrl), "/languages"),
-  case httpc:request(get, {LanguageUrl, []}, [{timeout, 10000}], []) of
+  case httpc:request(get, {LanguageUrl, [auth_header(Username, Password)]}, [{timeout, 10000}], []) of
     {error, Reason} -> io:format("Repo error:~p~n", [Reason]);
-    {ok, {{_Version, StatusCode, _Reason}, _Headers1, Body1}} ->
+    {ok, {{_Version, StatusCode, Reason}, _Headers1, Body1}} ->
       case StatusCode of
         200 ->
           {Languages} = jiffy:decode(Body1),
@@ -72,9 +75,13 @@ fetch_language_info({RepoId, RepoUrl}) ->
                             Body1,
                             httpd_util:rfc1123_date(erlang:localtime()),
                             IsErlang]);
-        _ -> nothing
+        _ -> io:format("StatusCode:~p Reason:~p RepoId: ~p RepoUrl:~p~n", [StatusCode, Reason, RepoId, RepoUrl])
       end
   end,
 % io:format("Language URL: ~p~n", [LanguageUrl]),
 % io:format("Repo id: ~p~n", [RepoId]),
   timer:sleep(100).
+
+auth_header(User, Pass) ->
+    Encoded = base64:encode_to_string(lists:append([erlang:atom_to_list(User),":",erlang:atom_to_list(Pass)])),
+    {"Authorization","Basic " ++ Encoded}.
